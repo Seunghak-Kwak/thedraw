@@ -7,8 +7,8 @@ const getDraw = async () => {
   //const date = (new Date()).toLocaleDateString().split('.')
   const date = new Date().toLocaleString("ko-KR", {timeZone: "Asia/Seoul"}).split('.')
   const _mon = date[1].match(/\d+/g)[0]
-  //const _day = date[2].match(/\d+/g)[0]
-  const _day = "5"
+  const _day = date[2].match(/\d+/g)[0]
+  //const _day = "5"
   var drawlist = []
   var todaylist = []
   

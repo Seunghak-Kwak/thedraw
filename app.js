@@ -18,7 +18,7 @@ app.use(session({
   secret:'ras',
   resave:true,
   secure:false,
-  saveUninitialized:false,
+  saveUninitialized:true,
 }))
 
 app.use(logger('dev'));
