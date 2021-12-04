@@ -137,7 +137,6 @@ router.get('/friends', async(req,res,next)=>{
     let sendFriends;
     var draw_data = result.drawlist
     var today_data = result.todaylist
-    try{
       //friends uuid list
       let idList = []; 
       const fList = friends.data.elements;
@@ -148,6 +147,7 @@ router.get('/friends', async(req,res,next)=>{
       if (today_data.length > 0) {
         if (today_data.length > 1) {
           // console.log(template.list(today_data))
+          try{
           sendFriends = await axios({
             method:'post',
             url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
@@ -160,8 +160,12 @@ router.get('/friends', async(req,res,next)=>{
               template_object:template.list(today_data)
             })
           })
+          }catch(e){
+            console.log(e)
+          }
         }
         if (draw_data.length > 0) {
+          try{
           sendFriends = await axios({
             method:'post',
             url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
@@ -174,8 +178,12 @@ router.get('/friends', async(req,res,next)=>{
               template_object:template.feed(draw_data[0])
             })
           })
+          }catch(e){
+            console.log(e)
+          }
         }
         else{
+          try{
           if (today_data.length == 1) {
             sendFriends = await axios({
               method:'post',
@@ -190,16 +198,15 @@ router.get('/friends', async(req,res,next)=>{
               })
           })
           }
+          }catch(e){
+            console.log(e)
+          }
         }
         res.redirect('finish sending me and friends')
       }
       else{
         res.send("no data")
       }
-    }catch(e){
-        console.log(e);
-        res.json(e);
-    }
   })
 
 });

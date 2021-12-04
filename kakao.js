@@ -1,15 +1,12 @@
-// prd
-// const kakao = {
-//     clientID: 'fdf44f36dda09952b34632a029809d97',
-//     clientSecret: '6ODPJxue77NfLqCzzUVybWOP76ADzr2c',
-//     redirectUri: 'https://kwagi.ml/subscribe/callback'
-//   }
+let domain = "https://kwagi.ml"
+if (process.platform == 'win32'){
+  domain = "http://localhost:3000"
+}
 
-//dev
 const kakao = {
   clientID: 'fdf44f36dda09952b34632a029809d97',
   clientSecret: '6ODPJxue77NfLqCzzUVybWOP76ADzr2c',
-  redirectUri: 'http://localhost:3000/subscribe/callback'
+  redirectUri: domain+'/subscribe/callback'
 }  
 
   module.exports = kakao;
