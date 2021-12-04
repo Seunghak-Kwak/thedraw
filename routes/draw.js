@@ -112,7 +112,7 @@ router.get('/friends', async(req,res,next)=>{
     })
     
   }catch(err){
-    res.json(err); //err.data
+    return res.json(err); //err.data
   }
 
   //친구에게 보내기
@@ -125,15 +125,15 @@ router.get('/friends', async(req,res,next)=>{
               Authorization: `Bearer ${token.data.access_token}`
           }
       })
-      res.send(friends.data);
+      //res.send(friends.data);
   }catch(e){
       console.log(e);
-      return next(e);
+      return res.json(e);
       // res.json(e);
   }
 
   //친구에게
-  scrap.getDraw().then(async (result) => {
+  scrap.getDraw().then(async(result) => {
     let sendFriends;
     var draw_data = result.drawlist
     var today_data = result.todaylist
@@ -143,29 +143,24 @@ router.get('/friends', async(req,res,next)=>{
       fList.forEach(function(elem, i) {
         idList[i] = '"'+elem.uuid+'"'
       });
-
+    try {
       if (today_data.length > 0) {
         if (today_data.length > 1) {
           // console.log(template.list(today_data))
-          try{
-          sendFriends = await axios({
-            method:'post',
-            url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
-            headers:{
-                'content-type': 'application/x-www-form-urlencoded',
-                Authorization: `Bearer ${token.data.access_token}`
-            },
-            data:qs.stringify({
-              receiver_uuids : '['+idList+']',
-              template_object:template.list(today_data)
-            })
-          })
-          }catch(e){
-            console.log(e)
-          }
-        }
+              sendFriends = await axios({
+              method:'post',
+              url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
+              headers:{
+                  'content-type': 'application/x-www-form-urlencoded',
+                  Authorization: `Bearer ${token.data.access_token}`
+              },
+              data:qs.stringify({
+                receiver_uuids : '['+idList+']',
+                template_object:template.list(today_data)
+              })
+            });
+      }
         if (draw_data.length > 0) {
-          try{
           sendFriends = await axios({
             method:'post',
             url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
@@ -178,12 +173,8 @@ router.get('/friends', async(req,res,next)=>{
               template_object:template.feed(draw_data[0])
             })
           })
-          }catch(e){
-            console.log(e)
-          }
         }
         else{
-          try{
           if (today_data.length == 1) {
             sendFriends = await axios({
               method:'post',
@@ -198,17 +189,22 @@ router.get('/friends', async(req,res,next)=>{
               })
           })
           }
-          }catch(e){
-            console.log(e)
-          }
         }
-        res.redirect('finish sending me and friends')
       }
       else{
         res.send("no data")
+        return "nodata"
       }
-  })
-
+    }
+    catch(e){
+      console.log(e);
+      res.json(e)
+    }
+  }).then( (result) => {
+    if(!result) {
+      res.send('finish sending me and friends')
+    }
+  }).catch( err => console.log('TT'))
 });
 
 module.exports = router;
