@@ -82,7 +82,8 @@ req.session.message = '이미 해당 BOT을 구독중입니다! 감사합니다:
 
 const found = users[drawID].some(el => el.kakao_account.email === user.data.kakao_account.email);
 if (found) {
-    res.redirect('info')
+    // res.redirect('info')
+    res.redirect('done')
   }
 else{
   users[drawID].push(user.data);

@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>THE DRAW BOT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->	
+    <link rel="icon" type="image/png" href="/images/icons/favicon.ico"/>
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <!--===============================================================================================-->
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>구독할 Bot을 선택해주세요!</p>
-    <br>
-    <p>
-      <a href="/draw1/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 1</span></button></a> 
-      &nbsp;<span>(<%= draw1 %>/5)</span>
-    </p>
-    <p>
-      <a href="/draw2/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 2</span></button></a>
-      &nbsp;<span>(<%= draw2 %>/5)</span>
-    </p>
-    <p>
-      <a href="/draw3/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 3</span></button></a>
-      &nbsp;<span>(<%= draw3 %>/5)</span>
-    </p>
+<body>
 
-  </body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+					<span class="login100-form-title p-b-30">
+						THE DRAW BOT
+					</span>
+					<span class="login100-form-title p-b-70">
+						<span class="txt1">구독할 Bot을 선택해주세요!</span>
+
+					</span>
+					<span class="login100-form-avatar p-b-70">
+						<img src="/images/avatar-02.jpg" alt="AVATAR">
+					</span>
+
+					<div class="container-login100-form-btn m-t-20 m-b-20">
+						<button class="login100-form-btn" onclick="location.href='/draw1/subscribe';">
+              Kakao Bot 1 - (<%= draw1 %>/5)
+						</button>
+					</div>
+          <div class="container-login100-form-btn m-t-20 m-b-20">
+						<button class="login100-form-btn" onclick="location.href='/draw2/subscribe';">
+              Kakao Bot 2 - (<%= draw2 %>/5)
+						</button>
+					</div>
+          <div class="container-login100-form-btn m-t-20 m-b-20">
+						<button class="login100-form-btn" onclick="location.href='/draw3/subscribe';">
+              Kakao Bot 3 - (<%= draw3 %>/5)
+						</button>
+					</div>
+			</div>
+		</div>
+	</div>
+
+</body>
 </html>
