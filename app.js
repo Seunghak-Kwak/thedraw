@@ -6,7 +6,9 @@ var logger = require('morgan');
 const session = require('express-session');
 
 var indexRouter = require('./routes/index');
-var drawRouter = require('./routes/draw');
+var draw1Router = require('./routes/draw1/index');
+var draw2Router = require('./routes/draw2/index');
+var draw3Router = require('./routes/draw3/index');
 
 var app = express();
 
@@ -28,7 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/draw', drawRouter);
+app.use('/draw1', draw1Router);
+app.use('/draw2', draw2Router);
+app.use('/draw3', draw3Router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

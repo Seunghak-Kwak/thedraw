@@ -4,13 +4,13 @@ const axios = require("axios");
 const qs = require('qs');
 const fs = require('fs');
 
-const kakao = require('../kakao');
-const scrap = require('../scrap');
-const template = require('../template');
+const kakao = require('../../kakao').kakao2;
+const scrap = require('../../scrap');
+const template = require('../../template');
 
 router.get('/', async function(req, res, next) {
   // 토큰 갱신
-  let refresh_token = JSON.parse(fs.readFileSync('./kakao_token.json'));
+  let refresh_token = JSON.parse(fs.readFileSync(kakao.tokenPath));
   try{ //access토큰을 받기
     token = await axios({//token
         method: 'POST',
@@ -80,7 +80,7 @@ router.get('/', async function(req, res, next) {
           }
         }
         req.session.kakao_token = token.data;
-        res.redirect('/draw/friends') //친구에게 보내기
+        res.redirect('send/friends') //친구에게 보내기
       }
       else{
         res.send("no data")
@@ -95,7 +95,7 @@ router.get('/', async function(req, res, next) {
 router.get('/friends', async(req,res,next)=>{
 
   // 토큰 갱신
-  let refresh_token = JSON.parse(fs.readFileSync('./kakao_token.json'));
+  let refresh_token = JSON.parse(fs.readFileSync(kakao.tokenPath));
   try{ //access토큰을 받기
     token = await axios({//token
         method: 'POST',

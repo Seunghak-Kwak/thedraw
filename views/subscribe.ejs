@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>구독할 Bot을 선택해주세요!</p>
+    <br>
+    <p>
+      <a href="/draw1/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 1</span></button></a> 
+      &nbsp;<span>(<%= draw1 %>/5)</span>
+    </p>
+    <p>
+      <a href="/draw2/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 2</span></button></a>
+      &nbsp;<span>(<%= draw2 %>/5)</span>
+    </p>
+    <p>
+      <a href="/draw3/subscribe" style="text-decoration: none;"><button><span style="font-size: 1.2em;">Kakao Bot 3</span></button></a>
+      &nbsp;<span>(<%= draw3 %>/5)</span>
+    </p>
+
+  </body>
+</html>
