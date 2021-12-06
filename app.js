@@ -12,6 +12,12 @@ var draw3Router = require('./routes/draw3/index');
 
 var app = express();
 
+//logging timezone
+logger.token('date', function() {
+  var k = new Date().toLocaleString("ko-KR", {timeZone: "Asia/Seoul"})
+  return (k);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -23,7 +29,9 @@ app.use(session({
   saveUninitialized:true,
 }))
 
-app.use(logger('dev'));
+app.use(logger('common'));
+//app.use(logger(':method :url :status :response-time :date[clf]'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
