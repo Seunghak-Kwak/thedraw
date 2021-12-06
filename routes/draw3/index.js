@@ -76,7 +76,8 @@ router.get('/subscribe/callback', async(req,res)=>{
   //user가 admin일땐 refrsh_token 값 갱신 (for sending message)
   if (user.data.kakao_account.email == "kdhak2@gmail.com") {
     if (token.data.scope.includes('talk_message')) fs.writeFileSync(kakao.tokenPath, JSON.stringify(token.data)); 
-  } 
+  }
+  
 let userjson = fs.readFileSync("./user.json","utf-8")
 let users = JSON.parse(userjson)
 req.session.kakao = user.data;
