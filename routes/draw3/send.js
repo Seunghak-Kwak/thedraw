@@ -80,7 +80,7 @@ router.get('/', async function(req, res, next) {
           }
         }
         req.session.kakao_token = token.data;
-        res.redirect('send/friends') //친구에게 보내기
+        res.redirect('send/friends') //친구도
       }
       else{
         res.send("no data")
@@ -115,7 +115,7 @@ router.get('/friends', async(req,res,next)=>{
     return res.json(err); //err.data
   }
 
-  //친구에게 보내기
+  //친구 찾기
   let friends;
   try{
       friends = await axios({
@@ -143,6 +143,9 @@ router.get('/friends', async(req,res,next)=>{
       fList.forEach(function(elem, i) {
         idList[i] = '"'+elem.uuid+'"'
       });
+      console.log(friends.data.elements)
+      console.log(idList)
+      
     try {
       if (today_data.length > 0) {
         if (today_data.length > 1) {
@@ -205,6 +208,8 @@ router.get('/friends', async(req,res,next)=>{
       res.send('finish sending me and friends')
     }
   }).catch( err => console.log('TT'))
+
+  
 });
 
 module.exports = router;

@@ -9,6 +9,8 @@ const drawID = "draw2"
 
 var subRouter = require('./send');
 router.use('/send', subRouter);
+var testRouter = require('./test_send')
+router.use('/test', testRouter);
 
 /* SubScribe */
 router.get('/admin/subscribe', function(req, res, next) {
@@ -80,7 +82,7 @@ let users = JSON.parse(userjson)
 req.session.kakao = user.data;
 req.session.message = '이미 해당 BOT을 구독중입니다! 감사합니다:)'
 
-const found = users[drawID].some(el => el.kakao_account.email === user.data.kakao_account.email);
+const found = users[drawID].some(el => el.kakao_account.profile.nickname === user.data.kakao_account.profile.nickname);
 if (found) {
     res.redirect('info')
   }
