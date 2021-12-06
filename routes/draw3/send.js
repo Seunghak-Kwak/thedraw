@@ -52,7 +52,8 @@ router.get('/', async function(req, res, next) {
           })
         }
         if (draw_data.length > 0) {
-          sendme = await axios({
+          draw_data.forEach(async (elem, i) => {
+            sendme = await axios({
               method:'post',
               url:'https://kapi.kakao.com/v2/api/talk/memo/default/send',
               headers:{
@@ -62,6 +63,7 @@ router.get('/', async function(req, res, next) {
               data:qs.stringify({
                 template_object:template.feed(draw_data[0])
               })
+            })
           })
         }
         else{
@@ -74,9 +76,9 @@ router.get('/', async function(req, res, next) {
                   Authorization: `Bearer ${token.data.access_token}`
               },
               data:qs.stringify({
-                template_object:template.feed(today_data[0])
+                template_object:template.feed(draw_data[i])
               })
-          })
+            })
           }
         }
         req.session.kakao_token = token.data;
@@ -164,16 +166,18 @@ router.get('/friends', async(req,res,next)=>{
             });
       }
         if (draw_data.length > 0) {
-          sendFriends = await axios({
-            method:'post',
-            url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
-            headers:{
-                'content-type': 'application/x-www-form-urlencoded',
-                Authorization: `Bearer ${token.data.access_token}`
-            },
-            data:qs.stringify({
-              receiver_uuids : '['+idList+']',
-              template_object:template.feed(draw_data[0])
+          draw_data.forEach(async (elem, i) => {
+            sendFriends = await axios({
+              method:'post',
+              url:'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
+              headers:{
+                  'content-type': 'application/x-www-form-urlencoded',
+                  Authorization: `Bearer ${token.data.access_token}`
+              },
+              data:qs.stringify({
+                receiver_uuids : '['+idList+']',
+                template_object:template.feed(draw_data[i])
+              })
             })
           })
         }
@@ -207,7 +211,7 @@ router.get('/friends', async(req,res,next)=>{
     if(!result) {
       res.send('finish sending me and friends')
     }
-  }).catch( err => console.log('TT'))
+  }).catch( err => console.log(err))
 
   
 });
