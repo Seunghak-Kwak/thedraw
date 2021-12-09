@@ -84,10 +84,12 @@ router.get('/friends', async(req,res,next)=>{
       let idList = []; 
       const fList = friends.data.elements;
       fList.forEach(function(elem, i) {
-        idList[i] = '"'+elem.uuid+'"'
+        // idList[i] = '"'+elem.uuid+'"'
+        idList[i] = elem.uuid
       });
       console.log(friends.data.elements)
       console.log(idList)
+      console.log('["'+idList+'"]')
       
     // try {
     //   if (today_data.length > 0) {

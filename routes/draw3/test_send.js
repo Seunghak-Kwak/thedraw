@@ -147,6 +147,8 @@ router.get('/friends', async(req,res,next)=>{
       });
       console.log(friends.data.elements)
       console.log(idList)
+      console.log('['+idList+']')
+
 
   }).then( (result) => {
     if(!result) {
