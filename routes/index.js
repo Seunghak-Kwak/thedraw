@@ -11,9 +11,9 @@ router.get('/', function(req, res, next) {
 router.get('/subscribe', function(req, res, next) {
   let userjson = fs.readFileSync("./user.json","utf-8")
   let users = JSON.parse(userjson)
-  let [count1, count2, count3] = [users.draw1.length,users.draw2.length,users.draw3.length]
+  let [count1, count2, count3, count4] = [users.draw1.length,users.draw2.length,users.draw3.length, users.draw4.length]
 
-  res.render('subscribe', { title: 'THE DRAW Bot!', draw1:count1, draw2:count2, draw3:count3});
+  res.render('subscribe', { title: 'THE DRAW Bot!', draw1:count1, draw2:count2, draw3:count3, draw4:count4});
 });
 
 module.exports = router;

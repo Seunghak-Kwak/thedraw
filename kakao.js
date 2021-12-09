@@ -30,4 +30,13 @@ const kakao3 = {
   admin_scope:"profile_nickname,profile_image,account_email,talk_message,friends"
 }
 
-module.exports = { kakao1, kakao2, kakao3 };
+const kakao4 = {
+  clientID: 'a3ad22ee33a81db86c7df7f24fb3c005',
+  clientSecret: 'Tk6RELAWjliRbfL3iPcdYKxdGgF69pwM',
+  redirectUri: domain+'/draw4/subscribe/callback',
+  tokenPath: './tokens/draw4_token.json',
+  scope:'profile_nickname,profile_image,account_email',
+  admin_scope:"profile_nickname,profile_image,account_email,talk_message,friends"
+}
+
+module.exports = { kakao1, kakao2, kakao3, kakao4};
