@@ -9,6 +9,7 @@ const scrap = require('../../scrap');
 const template = require('../../template');
 
 router.get('/', async function(req, res, next) {
+  let token;
   // 토큰 갱신
   let refresh_token = JSON.parse(fs.readFileSync(kakao.tokenPath));
   try{ //access토큰을 받기
@@ -95,7 +96,7 @@ router.get('/', async function(req, res, next) {
 });
 
 router.get('/friends', async(req,res,next)=>{
-
+  let token;
   // 토큰 갱신
   let refresh_token = JSON.parse(fs.readFileSync(kakao.tokenPath));
   try{ //access토큰을 받기

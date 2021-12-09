@@ -50,9 +50,6 @@ const feed = (args) => {
             }
         },
         social: {
-            like_count: 999,
-            comment_count: 999,
-            shared_count: 999
         },
         buttons: [
             {
