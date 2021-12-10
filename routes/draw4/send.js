@@ -144,11 +144,10 @@ router.get('/friends', async(req,res,next)=>{
       let idList = []; 
       const fList = friends.data.elements;
       fList.forEach(function(elem, i) {
-        idList[i] = elem.uuid
+        idList[i] = elem.uuid 
       });
       console.log(friends.data.elements)
       console.log(idList)
-      console.log('["'+idList+'"]')
       
     try {
       if (today_data.length > 0) {
@@ -162,7 +161,7 @@ router.get('/friends', async(req,res,next)=>{
                   Authorization: `Bearer ${token.data.access_token}`
               },
               data:qs.stringify({
-                receiver_uuids : '["'+idList+'"]',
+                receiver_uuids : JSON.stringify(idList),
                 template_object:template.list(today_data)
               })
             });
@@ -177,7 +176,7 @@ router.get('/friends', async(req,res,next)=>{
                   Authorization: `Bearer ${token.data.access_token}`
               },
               data:qs.stringify({
-                receiver_uuids : '["'+idList+'"]',
+                receiver_uuids : JSON.stringify(idList),
                 template_object:template.feed(draw_data[i])
               })
             })
@@ -193,7 +192,7 @@ router.get('/friends', async(req,res,next)=>{
                   Authorization: `Bearer ${token.data.access_token}`
               },
               data:qs.stringify({
-                receiver_uuids : '["'+idList+'"]',
+                receiver_uuids : JSON.stringify(idList),
                 template_object:template.feed(today_data[0])
               })
           })
