@@ -361,5 +361,54 @@
             }
         }
     ],
-    "draw4":[]
+    "draw4": [
+        {
+            "id": 2026802900,
+            "connected_at": "2021-12-09T15:12:20Z",
+            "properties": {
+                "nickname": "곽승학",
+                "profile_image": "http://k.kakaocdn.net/dn/bYpdKl/btqSxCGALY9/Db1uBms40OC0VHfCf7ZJ81/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/bYpdKl/btqSxCGALY9/Db1uBms40OC0VHfCf7ZJ81/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "곽승학",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/bYpdKl/btqSxCGALY9/Db1uBms40OC0VHfCf7ZJ81/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/bYpdKl/btqSxCGALY9/Db1uBms40OC0VHfCf7ZJ81/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": false,
+                "is_email_valid": true,
+                "is_email_verified": true,
+                "email": "kdhak2@gmail.com"
+            }
+        },
+        {
+            "id": 2029139483,
+            "connected_at": "2021-12-11T09:08:50Z",
+            "properties": {
+                "nickname": "가온",
+                "profile_image": "http://k.kakaocdn.net/dn/M5B8l/btrfoHlr0hR/jyTsbxktohDPg3SThTlja0/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/M5B8l/btrfoHlr0hR/jyTsbxktohDPg3SThTlja0/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "가온",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/M5B8l/btrfoHlr0hR/jyTsbxktohDPg3SThTlja0/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/M5B8l/btrfoHlr0hR/jyTsbxktohDPg3SThTlja0/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": false,
+                "is_email_valid": true,
+                "is_email_verified": true,
+                "email": "chgaon1690@naver.com"
+            }
+        }
+    ]
 }
