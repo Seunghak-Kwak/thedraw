@@ -54,7 +54,7 @@ const sendFriends = async (token, scrap_data, idList, type) => {
       Authorization: `Bearer ${token.data.access_token}`,
     },
     data: qs.stringify({
-      receiver_uuids: '["' + idList + '"]',
+      receiver_uuids: JSON.stringify(idList),
       template_object: template[type](scrap_data),
     }),
   });
