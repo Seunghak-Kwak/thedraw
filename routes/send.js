@@ -6,7 +6,9 @@ const kakaolist = require("../kakao");
 const scrap = require("../scrap");
 
 router.post("/", async function (req, res, next) {
-  if (req.body.id != 'kwagi') { res.send("denied")  }
+  if (req.body.id != 'kwagi') {
+    console.log(req.body)
+    res.send("denied")  }
   else{
     //scrap data
     scrap.getDraw()
