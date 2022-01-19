@@ -49,30 +49,6 @@
             }
         },
         {
-            "id": 2020906454,
-            "connected_at": "2021-12-05T11:01:28Z",
-            "properties": {
-                "nickname": "임진석JASON",
-                "profile_image": "http://k.kakaocdn.net/dn/qL4o1/btqs73u2uF9/xigHkJn4ewMmFxZC0wsbD1/img_640x640.jpg",
-                "thumbnail_image": "http://k.kakaocdn.net/dn/qL4o1/btqs73u2uF9/xigHkJn4ewMmFxZC0wsbD1/img_110x110.jpg"
-            },
-            "kakao_account": {
-                "profile_nickname_needs_agreement": false,
-                "profile_image_needs_agreement": false,
-                "profile": {
-                    "nickname": "임진석JASON",
-                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/qL4o1/btqs73u2uF9/xigHkJn4ewMmFxZC0wsbD1/img_110x110.jpg",
-                    "profile_image_url": "http://k.kakaocdn.net/dn/qL4o1/btqs73u2uF9/xigHkJn4ewMmFxZC0wsbD1/img_640x640.jpg",
-                    "is_default_image": false
-                },
-                "has_email": true,
-                "email_needs_agreement": false,
-                "is_email_valid": true,
-                "is_email_verified": true,
-                "email": "noamsaid@kakao.com"
-            }
-        },
-        {
             "id": 2021016326,
             "connected_at": "2021-12-05T12:19:14Z",
             "properties": {
@@ -118,6 +94,30 @@
                 "is_email_valid": true,
                 "is_email_verified": true,
                 "email": "zakarura@nate.com"
+            }
+        },
+        {
+            "id": 2068407686,
+            "connected_at": "2022-01-07T03:05:43Z",
+            "properties": {
+                "nickname": "안진수",
+                "profile_image": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "안진수",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": false,
+                "is_email_valid": true,
+                "is_email_verified": true,
+                "email": "jsa0412@hanmail.net"
             }
         }
     ],
@@ -409,7 +409,75 @@
                 "is_email_verified": true,
                 "email": "chgaon1690@naver.com"
             }
-
+        },
+        {
+            "id": 2030109729,
+            "connected_at": "2021-12-12T04:45:01Z",
+            "properties": {
+                "nickname": "권순찬",
+                "profile_image": "http://k.kakaocdn.net/dn/iKJJv/btrjWl5M9YM/GdYkqQ9UbTMegPdvwwXTH1/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/iKJJv/btrjWl5M9YM/GdYkqQ9UbTMegPdvwwXTH1/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "권순찬",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/iKJJv/btrjWl5M9YM/GdYkqQ9UbTMegPdvwwXTH1/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/iKJJv/btrjWl5M9YM/GdYkqQ9UbTMegPdvwwXTH1/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": false,
+                "is_email_valid": true,
+                "is_email_verified": true,
+                "email": "dbgnfkrn11@naver.com"
+            }
+        },
+        {
+            "id": 2034672999,
+            "connected_at": "2021-12-15T07:38:31Z",
+            "properties": {
+                "nickname": "장훈",
+                "profile_image": "http://k.kakaocdn.net/dn/b5Q1d8/btqZn1eM6OQ/uvEdXiXGUCk2cdKkj5HXek/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/b5Q1d8/btqZn1eM6OQ/uvEdXiXGUCk2cdKkj5HXek/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "장훈",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/b5Q1d8/btqZn1eM6OQ/uvEdXiXGUCk2cdKkj5HXek/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/b5Q1d8/btqZn1eM6OQ/uvEdXiXGUCk2cdKkj5HXek/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": true
+            }
+        },
+        {
+            "id": 2038911141,
+            "connected_at": "2021-12-18T03:54:05Z",
+            "properties": {
+                "nickname": "안진수",
+                "profile_image": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_640x640.jpg",
+                "thumbnail_image": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_110x110.jpg"
+            },
+            "kakao_account": {
+                "profile_nickname_needs_agreement": false,
+                "profile_image_needs_agreement": false,
+                "profile": {
+                    "nickname": "안진수",
+                    "thumbnail_image_url": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_110x110.jpg",
+                    "profile_image_url": "http://k.kakaocdn.net/dn/sR41O/btrjjcCOxWG/sApVYWUqvEtKEBwBK3f111/img_640x640.jpg",
+                    "is_default_image": false
+                },
+                "has_email": true,
+                "email_needs_agreement": false,
+                "is_email_valid": true,
+                "is_email_verified": true,
+                "email": "jsa0412@hanmail.net"
+            }
         }
     ]
 }
