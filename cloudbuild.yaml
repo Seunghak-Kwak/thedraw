@@ -5,5 +5,3 @@ steps:
 - name: node
   entrypoint: npm
   args: ['test']
-options:
-  glogging: CLOUD_LOGGING_ONLY
