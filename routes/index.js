@@ -103,7 +103,7 @@ router.get('/subscribe/draw/:appId', function(req, res, next) {
   //   res.redirect('/subscribe/info')
   // }
   // else{
-  const kakaoAuthURL = `https://kauth.kakao.com/oauth/authorize?client_id=${kakao.clientID}&redirect_uri=${kakao.redirectUri}&response_type=code&scope=${kakao.scope}`;
+  const kakaoAuthURL = `https://kauth.kakao.com/oauth/authorize?client_id=${kakao.clientID}&redirect_uri=${kakao.redirectUri}&response_type=code&scope=${kakao.admin_scope}`;
   res.redirect(kakaoAuthURL);
   // }
 

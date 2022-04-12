@@ -16,6 +16,7 @@ router.post("/", async function (req, res, next) {
         var today_data = result.todaylist;
 
         for (const [key, value] of Object.entries(kakaolist)) {
+          if (key == "base") continue;
           let kakao = kakaolist[key];
 
           // 토큰 갱신
