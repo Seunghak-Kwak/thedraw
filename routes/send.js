@@ -51,10 +51,6 @@ router.post("/", async function (req, res, next) {
             let sendFriends;
             //send
             if (draw_data.length > 0) {
-              if (draw_data.length > 1) {
-                sendme = api.sendme(token, draw_data, "list");
-                sendFriends = api.sendFriends(token, draw_data, idList, "list");
-              }
               draw_data.forEach(async (elem, i) => {
                 sendme = api.sendme(token, draw_data[i], "feed");
                 sendFriends = api.sendFriends(token,draw_data[i],idList,"feed");
