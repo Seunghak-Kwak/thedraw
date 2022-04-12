@@ -3,6 +3,15 @@ if (process.platform == 'win32'){
   domain = "http://localhost:3000"
 }
 
+const base = {
+  clientID: 'e1027b9de86263b5d53429bba203d6bc',
+  clientSecret: 'JzAa3n4TjwmGCFyTtq4ETsLmvynW08GA',
+  redirectUri: domain+'/login/callback',
+  //tokenPath: './tokens/draw1_token.json',
+  scope:'profile_nickname,profile_image,account_email',
+  //admin_scope:"profile_nickname,profile_image,account_email,talk_message,friends"
+}
+
 const kakao1 = {
   clientID: 'fdf44f36dda09952b34632a029809d97',
   clientSecret: '6ODPJxue77NfLqCzzUVybWOP76ADzr2c',
@@ -39,5 +48,5 @@ const kakao4 = {
   admin_scope:"profile_nickname,profile_image,account_email,talk_message,friends"
 }
 
-module.exports = { kakao1, kakao2, kakao3, kakao4 };
+module.exports = { base, kakao1, kakao2, kakao3, kakao4 };
 // module.exports = { kakao1 };
